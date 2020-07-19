@@ -1,0 +1,14 @@
+{
+    "name": "lvl/1",
+    "description": "this os my first web project",
+    "authors": [
+        {
+            "name": "Bi Serg",
+            "email": "i.b@msulab.ru"
+        }
+    ],
+    "require": {},
+    "bin": [
+        "bin/brain-games"
+      ]
+}
