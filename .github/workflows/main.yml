@@ -21,11 +21,14 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+<<<<<<< HEAD
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
       run: echo Hello, world!
 
+=======
+>>>>>>> 82ff5ace3f1037e26b6c66a21036b1778b5dcdd1
     # Run linter check
     - name: Run a linter checker
       run: make lint
