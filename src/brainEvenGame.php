@@ -20,7 +20,7 @@ function run_even()
         $correctAnswer = ($randomNumber % 2 === 0 ? "yes" : "no");
         if ($answer == $correctAnswer) {
             line("Correct!");
-            $counter++;     
+            $counter++;
         } else {
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
             Let's try again, Bill!");
