@@ -9,6 +9,9 @@ if (file_exists($autoloadPath1)) {
 } else {
     require_once $autoloadPath2;
 }
-use function Cli\run;
+
+use function Php\Project\Lvl1\basic\sayHi;
+
+sayHi();
 Php\Project\Lvl1\Cli\run();
 ?>

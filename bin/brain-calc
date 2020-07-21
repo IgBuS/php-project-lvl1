@@ -8,11 +8,9 @@ if (file_exists($autoloadPath1)) {
 } else {
     require_once $autoloadPath2;
 }
-
 use function Php\Project\Lvl1\play\play;
 
-$rule = 'Answer "yes" if the number is even, otherwise answer "no".';
-$gameName = 'Php\Project\Lvl1\brainEvenGame\run_even';
+$rule = 'What is the result of the expression?';
+$gameName = 'Php\Project\Lvl1\brainCalcGame\run_calc';
 play($rule, $gameName);
-
 ?>

@@ -13,7 +13,12 @@
       },
     "autoload": {
         "files": [ "src/Cli.php",
-        "src/brainEvenGame.php"]
+        "src/Games/brainEvenGame.php",
+        "src/Games/brainCalcGame.php",
+        "src/config.php",
+        "src/basicFunctions.php",
+        "src/play.php"
+      ]
       },
     "require": {
         "wp-cli/php-cli-tools": "*"
