@@ -23,7 +23,7 @@ function run_even()
             $counter++;
         } else {
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
-            Let's try again, Bill!");
+            Let's try again, %s!", $name);
             $counter = 0;
         }
     } while ($counter < 3);
