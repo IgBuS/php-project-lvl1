@@ -4,7 +4,8 @@
             "bin/brain-even",
             "bin/brain-calc",
             "bin/brain-gcd",
-            "bin/brain-progression"],
+            "bin/brain-progression",
+            "bin/brain-prime"],
     "description": "this os my first web project",
     "authors": [
         {
@@ -21,6 +22,7 @@
         "src/Games/brainCalcGame.php",
         "src/Games/brainGcdGame.php",
         "src/Games/brainProgressGame.php",
+        "src/Games/brainPrimeGame.php",
         "src/config.php",
         "src/basicFunctions.php",
         "src/play.php"
