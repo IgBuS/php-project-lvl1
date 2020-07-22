@@ -1,6 +1,6 @@
 {
     "name": "lvl/1",
-    "bin": ["bin/brain-games", "bin/brain-even"],
+    "bin": ["bin/brain-games", "bin/brain-even", "bin/brain-calc"],
     "description": "this os my first web project",
     "authors": [
         {
