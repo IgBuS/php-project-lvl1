@@ -1,6 +1,9 @@
 {
     "name": "lvl/1",
-    "bin": ["bin/brain-games", "bin/brain-even", "bin/brain-calc"],
+    "bin": ["bin/brain-games",
+            "bin/brain-even",
+            "bin/brain-calc",
+            "bin/brain-gcd"],
     "description": "this os my first web project",
     "authors": [
         {
@@ -15,6 +18,7 @@
         "files": [ "src/Cli.php",
         "src/Games/brainEvenGame.php",
         "src/Games/brainCalcGame.php",
+        "src/Games/brainGcdGame.php",
         "src/config.php",
         "src/basicFunctions.php",
         "src/play.php"

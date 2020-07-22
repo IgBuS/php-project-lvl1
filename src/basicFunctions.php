@@ -40,5 +40,5 @@ function returnWrong($answer, $correctAnswer, $name)
 
 function returnSuccess($name)
 {
-    line("Congratulations, %s", $name);
+    line("Congratulations, %s!", $name);
 }
