@@ -10,7 +10,7 @@ if (file_exists($autoloadPath1)) {
 }
 use function Php\Project\Lvl1\play\play;
 
-$rule = 'What number is missing in the progression?';
+$rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 $gameName = 'Php\Project\Lvl1\brainPrimeGame\run_prime';
 play($rule, $gameName);
 ?>
