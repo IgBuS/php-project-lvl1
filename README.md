@@ -14,7 +14,8 @@ You can enjoy 5 different games including:
 - Prime number detection BrainGame
 - Progression member detection BrainGame
 
-
+To install package use:
+- composer require biserg/braingames
 
 Result video:
 https://asciinema.org/a/ig1FURSOcOvlYFQYyVwFUVewW
