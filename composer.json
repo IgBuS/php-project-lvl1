@@ -1,5 +1,5 @@
 {
-    "name": "lvl/1",
+    "name": "biserg/braingames",
     "bin": ["bin/brain-games",
             "bin/brain-even",
             "bin/brain-calc",
