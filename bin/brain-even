@@ -11,8 +11,6 @@ if (file_exists($autoloadPath1)) {
 
 use function Php\Project\Lvl1\play\play;
 
-$rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 $gameName = 'Php\Project\Lvl1\brainEvenGame\run_even';
-play($rule, $gameName);
-
+play($gameName);
 ?>

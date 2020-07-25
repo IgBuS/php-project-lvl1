@@ -16,9 +16,14 @@ function isPrime($number)
     }
     return true;
 }
-function run_prime()
+
+function run_prime($mode = 'task/answer')
 {
-    $task = random_int(1, 101);
-    $correctAnswer = isPrime($task) ? "yes" : "no";
-    return [$task, $correctAnswer];
+    if ($mode == 'task/answer') {
+        $task = random_int(1, 101);
+        $correctAnswer = isPrime($task) ? "yes" : "no";
+        return [$task, $correctAnswer];
+    } elseif ($mode == 'rule') {
+        return $rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    }
 }

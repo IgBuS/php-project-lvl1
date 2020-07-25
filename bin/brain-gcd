@@ -8,9 +8,9 @@ if (file_exists($autoloadPath1)) {
 } else {
     require_once $autoloadPath2;
 }
+
 use function Php\Project\Lvl1\play\play;
 
-$rule = 'Find the greatest common divisor of given numbers.';
 $gameName = 'Php\Project\Lvl1\brainGcdGame\run_gcd';
-play($rule, $gameName);
+play($gameName);
 ?>

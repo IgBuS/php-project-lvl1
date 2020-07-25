@@ -8,9 +8,9 @@ if (file_exists($autoloadPath1)) {
 } else {
     require_once $autoloadPath2;
 }
+
 use function Php\Project\Lvl1\play\play;
 
-$rule = 'What number is missing in the progression?';
 $gameName = 'Php\Project\Lvl1\brainProgressGame\run_progress';
-play($rule, $gameName);
+play($gameName);
 ?>

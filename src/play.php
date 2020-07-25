@@ -14,10 +14,10 @@ use function Php\Project\Lvl1\basic\returnRight;
 use function Php\Project\Lvl1\basic\returnWrong;
 use function Php\Project\Lvl1\basic\returnSuccess;
 
-function play($rule, $game)
+function play($game)
 {
     sayHi();
-    $name = ruleInformAndNameRequest($rule);
+    $name = ruleInformAndNameRequest($game('rule'));
     for ($i = 0; $i < Config::$rounds; $i++) {
         [$task, $correctAnswer] = $game();
         askQuestion($task);
