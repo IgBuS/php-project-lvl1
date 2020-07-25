@@ -6,16 +6,13 @@
             "bin/brain-gcd",
             "bin/brain-progression",
             "bin/brain-prime"],
-    "description": "this os my first web project",
+    "description": "BrainGames - gamepack, Hexlet education project",
     "authors": [
         {
             "name": "Bi Serg",
             "email": "i.b@msulab.ru"
         }
     ],
-    "scripts": {
-        "phpcs": "phpcs"
-      },
     "autoload": {
         "files": [ "src/Cli.php",
         "src/Games/brainEvenGame.php",
