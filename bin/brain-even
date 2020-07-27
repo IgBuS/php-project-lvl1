@@ -9,8 +9,8 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-use function Php\Project\Lvl1\play\play;
+use function biserg\braingames\engine\runGame;
 
-$gameName = 'Php\Project\Lvl1\brainEvenGame\run_even';
-play($gameName);
+$gameName = 'biserg\braingames\brainEvenGame\run_even';
+runGame($gameName);
 ?>
