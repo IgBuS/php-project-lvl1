@@ -1,8 +1,8 @@
 <?php
 
-namespace biserg\braingames\brainGcdGame;
+namespace Biserg\BrainGames\BrainGcdGame;
 
-function run_gcd($mode = 'task/answer')
+function getGameData()
 {
     $gameData = [
         'Find the greatest common divisor of given numbers.',

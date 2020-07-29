@@ -1,6 +1,6 @@
 <?php
 
-namespace biserg\braingames\brainPrimeGame;
+namespace Biserg\BrainGames\BrainPrimeGame;
 
 function isPrime($number)
 {
@@ -15,7 +15,7 @@ function isPrime($number)
     return true;
 }
 
-function run_prime($mode = 'task/answer')
+function getGameData()
 {
     $gameData = [
         'Answer "yes" if given number is prime. Otherwise answer "no".',

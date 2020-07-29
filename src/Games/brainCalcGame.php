@@ -1,14 +1,15 @@
 <?php
 
-namespace biserg\braingames\brainCalcGame;
+namespace Biserg\BrainGames\BrainCalcGame;
 
-function run_calc()
+const ACTIONS = ['+', '-', '*'];
+
+function getGameData()
 {
     $gameData = [
         'What is the result of the expression?',
         function () {
-            $actions = ['+', '-', '*'];
-            $action = $actions[array_rand($actions)];
+            $action = ACTIONS[array_rand(ACTIONS)];
             $firstNumber = random_int(1, 100);
             $secondNumber = random_int(1, 100);
             $task = "$firstNumber" . " $action " . "$secondNumber";

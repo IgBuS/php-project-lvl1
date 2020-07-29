@@ -1,6 +1,9 @@
 #!/usr/bin/env php
 
 <?php
+
+use function Biserg\BrainGames\Engine\runGame;
+
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
 $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
 if (file_exists($autoloadPath1)) {
@@ -9,8 +12,6 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-use function biserg\braingames\engine\runGame;
-
-$gameName = 'biserg\braingames\brainEvenGame\run_even';
+$gameName = 'biserg\braingames\brainEvenGame\getGameData';
 runGame($gameName);
 ?>

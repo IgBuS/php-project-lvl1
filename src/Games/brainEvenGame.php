@@ -1,8 +1,8 @@
 <?php
 
-namespace biserg\braingames\brainEvenGame;
+namespace Biserg\BrainGames\BrainEvenGame;
 
-function run_even($mode = 'task/answer')
+function getGameData()
 {
     $gameData = [
         'Answer "yes" if the number is even, otherwise answer "no".',

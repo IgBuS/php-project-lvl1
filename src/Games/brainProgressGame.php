@@ -1,15 +1,16 @@
 <?php
 
-namespace biserg\braingames\brainProgressGame;
+namespace Biserg\Braingames\BrainProgressGame;
 
-function run_progress($mode = 'task/answer')
+const PROGRESSION_LENGTH = 10;
+
+function getGameData()
 {
     $gameData = [
         'What number is missing in the progression?',
         function () {
-            $progLength = 10;
             $progressionStep = random_int(1, 50);
-            $progression = range(0, $progressionStep * $progLength, $progressionStep);
+            $progression = range(0, $progressionStep * PROGRESSION_LENGTH, $progressionStep);
             $blanckIndex = array_rand($progression);
             $correctAnswer = $progression[$blanckIndex];
             $progression[$blanckIndex] = '..';

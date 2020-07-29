@@ -1,33 +1,29 @@
 <?php
 
-namespace biserg\braingames\engine;
+namespace Biserg\BrainGames\Engine;
 
 use function cli\line;
 use function cli\prompt;
 
-function runGame($game)
-{
-    $rounds = 3;
+const ROUNDS_COUNT = 3;
 
+function runGame($getGameData)
+{
     line('Welcome to the Brain Games!');
-    [$rule, $taskAnswer] = $game();
+    [$rule, $getTaskAndAnswer] = $getGameData();
     line($rule);
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
-    for ($i = 0; $i < $rounds; $i++) {
-        [$task, $correctAnswer] = $taskAnswer();
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
+        [$task, $correctAnswer] = $getTaskAndAnswer();
         line("Question: %s", $task);
-        $answer = prompt('Your answer');
-        if ($answer == $correctAnswer) {
-            line("Correct!");
-        } else {
-            line(
-                "'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
-            Let's try again, %s!",
-                $name
-            );
+        $userAnswer = prompt('Your answer');
+        if ($userAnswer != $correctAnswer) {
+            line("'$userAnswer' is wrong answer ;(. Correct answer was '$correctAnswer'.");
+            line("Let's try again, $name!");
             return null;
         }
+        line("Correct!");
     }
     line("Congratulations, %s!", $name);
 }

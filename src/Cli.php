@@ -1,6 +1,6 @@
 <?php
 
-namespace biserg\braingames\Cli;
+namespace Biserg\BrainGames\Cli;
 
 use function cli\line;
 use function cli\prompt;
