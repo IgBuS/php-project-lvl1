@@ -10,12 +10,12 @@ const ROUNDS_COUNT = 3;
 function runGame($getGameData)
 {
     line('Welcome to the Brain Games!');
-    [$rule, $getTaskAndAnswer] = $getGameData();
+    [$rule, $generateGameRoundData] = $getGameData();
     line($rule);
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-        [$task, $correctAnswer] = $getTaskAndAnswer();
+        [$task, $correctAnswer] = $generateGameRoundData();
         line("Question: %s", $task);
         $userAnswer = prompt('Your answer');
         if ($userAnswer != $correctAnswer) {
