@@ -9,8 +9,8 @@ const ROUNDS_COUNT = 3;
 
 function runGame($getGameData)
 {
-    line('Welcome to the Brain Games!');
     [$rule, $generateGameRoundData] = $getGameData();
+    line('Welcome to the Brain Games!');
     line($rule);
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
@@ -21,7 +21,7 @@ function runGame($getGameData)
         if ($userAnswer != $correctAnswer) {
             line("'$userAnswer' is wrong answer ;(. Correct answer was '$correctAnswer'.");
             line("Let's try again, $name!");
-            return null;
+            return;
         }
         line("Correct!");
     }

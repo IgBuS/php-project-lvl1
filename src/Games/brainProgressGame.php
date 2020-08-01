@@ -3,17 +3,18 @@
 namespace Biserg\Braingames\BrainProgressGame;
 
 const PROGRESSION_LENGTH = 10;
+const GAME_RULE = 'What number is missing in the progression?';
 
 function getGameData()
 {
     $gameData = [
-        'What number is missing in the progression?',
+        GAME_RULE,
         function () {
             $progressionStep = random_int(1, 50);
             $progression = range(0, $progressionStep * PROGRESSION_LENGTH, $progressionStep);
-            $blanckIndex = array_rand($progression);
-            $correctAnswer = $progression[$blanckIndex];
-            $progression[$blanckIndex] = '..';
+            $blankIndex = array_rand($progression);
+            $correctAnswer = $progression[$blankIndex];
+            $progression[$blankIndex] = '..';
             $task = implode(" ", $progression);
             return [$task, $correctAnswer];
         }
