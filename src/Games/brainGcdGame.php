@@ -6,18 +6,21 @@ const GAME_RULE = 'Find the greatest common divisor of given numbers.';
 
 function getGcd($a, $b)
 {
-    if ($a == 0 || $b == 0) {
-        return abs(max(abs($a), abs($b)));
+    while ($a != $b) {
+        if ($a > $b) {
+            $a -= $b;
+        } else {
+            $b -= $a;
+        }
     }
-    $r = $a % $b;
-    return ($r != 0) ? getGcd($b, $r) : abs($b);
+    return $a;
 }
 
 function getGameData()
 {
     $gameData = [
         GAME_RULE,
-        function () {
+        $generateGameRoundData = function () {
             $firstNumber = random_int(1, 100);
             $secondNumber = random_int(1, 100);
             $task = "{$firstNumber} {$secondNumber}";

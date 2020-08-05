@@ -2,21 +2,20 @@
 
 namespace Biserg\BrainGames\BrainCalcGame;
 
-const ACTIONS = ['+', '-', '*'];
 const GAME_RULE = 'What is the result of the expression?';
+const MATH_OPERATORS = ['+', '-', '*'];
 
-function count($action, $firstNumber, $secondNumber)
+function calculate($action, $firstNumber, $secondNumber)
 {
     switch ($action) {
         case '+':
             return $firstNumber + $secondNumber;
-        break;
         case '-':
             return $firstNumber - $secondNumber;
-        break;
         case '*':
             return $firstNumber * $secondNumber;
-        break;
+        default:
+            break;
     }
 }
 
@@ -24,12 +23,12 @@ function getGameData()
 {
     $gameData = [
         GAME_RULE,
-        function () {
-            $action = ACTIONS[array_rand(ACTIONS)];
+        $generateGameRoundData = function () {
+            $action = MATH_OPERATORS[array_rand(MATH_OPERATORS)];
             $firstNumber = random_int(1, 100);
             $secondNumber = random_int(1, 100);
             $task = "{$firstNumber} {$action} {$secondNumber}";
-            $correctAnswer = count($action, $firstNumber, $secondNumber);
+            $correctAnswer = calculate($action, $firstNumber, $secondNumber);
             return [$task, $correctAnswer];
         }
     ];
