@@ -12,7 +12,7 @@ function isPrime($number)
     if ($number === 2 || $number === 3) {
         return true;
     }
-    for ($i = 2; $i < sqrt($number); $i++) {
+    for ($i = 2; $i <= sqrt($number); $i++) {
         if ($number % $i === 0) {
             return false;
         }
