@@ -22,13 +22,14 @@ function isPrime($number)
 
 function getGameData()
 {
+    $generateGameRoundData = function () {
+        $task = random_int(1, 101);
+        $correctAnswer = isPrime($task) ? "yes" : "no";
+        return [$task, $correctAnswer];
+    };
     $gameData = [
         GAME_RULE,
-        $generateGameRoundData = function () {
-            $task = random_int(1, 101);
-            $correctAnswer = isPrime($task) ? "yes" : "no";
-            return [$task, $correctAnswer];
-        }
+        $generateGameRoundData
     ];
     return $gameData;
 }

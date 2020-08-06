@@ -11,13 +11,14 @@ function isEven($number)
 
 function getGameData()
 {
+    $generateGameRoundData = function () {
+        $task = random_int(1, 1000);
+        $correctAnswer = (isEven($task) ? "yes" : "no");
+        return [$task, $correctAnswer];
+    };
     $gameData = [
         GAME_RULE,
-        $generateGameRoundData = function () {
-            $task = random_int(1, 1000);
-            $correctAnswer = (isEven($task) ? "yes" : "no");
-            return [$task, $correctAnswer];
-        }
+        $generateGameRoundData
     ];
     return $gameData;
 }

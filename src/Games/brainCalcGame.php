@@ -21,16 +21,17 @@ function calculate($action, $firstNumber, $secondNumber)
 
 function getGameData()
 {
+    $generateGameRoundData = function () {
+        $action = MATH_OPERATORS[array_rand(MATH_OPERATORS)];
+        $firstNumber = random_int(1, 100);
+        $secondNumber = random_int(1, 100);
+        $task = "{$firstNumber} {$action} {$secondNumber}";
+        $correctAnswer = calculate($action, $firstNumber, $secondNumber);
+        return [$task, $correctAnswer];
+    };
     $gameData = [
         GAME_RULE,
-        $generateGameRoundData = function () {
-            $action = MATH_OPERATORS[array_rand(MATH_OPERATORS)];
-            $firstNumber = random_int(1, 100);
-            $secondNumber = random_int(1, 100);
-            $task = "{$firstNumber} {$action} {$secondNumber}";
-            $correctAnswer = calculate($action, $firstNumber, $secondNumber);
-            return [$task, $correctAnswer];
-        }
+        $generateGameRoundData
     ];
     return $gameData;
 }
